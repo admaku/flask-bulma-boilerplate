@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="author" conntent="">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!--styles-->
+    <<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.css"/>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+      <!-- Navigation -->
+    <nav class="navbar  is-link is-fixed-top navbar-brand"><a class="navbar-item brand" href="{{ url_for('home') }}">Flask-Bulma Boilerplate</a></div>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item" href="{{ url_for('about') }}">
+        <span class="icon">
+          <i class="fas fa-info"></i>
+        </span>
+        <span>About</span>
+      </a>
+      <a class="navbar-item" href="{{ url_for('login') }}">
+        <span class="icon">
+          <i class="fas fa-bars"></i>
+        </span>
+        <span>Login</span>
+      </a>
+      <a class="navbar-item" href="{{ url_for('register') }}">
+        <span class="icon">
+          <i class="fas fa-th-list"></i>
+        </span>
+        <span>Register</span>
+      </a>
+    </div>
+  </div>
+    </nav>
+
+    <!-- Page content -->
+    <div main id="content" role="main" class="container">
+
+        {% block content %}
+      
+        {% endblock %}
+            
+    </div>
+
+    <!-- Footer -->
+    <footer class=" has-text-centered">
+  
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0,0,0,0.2); color: rgba(255,255,255,0.6);">© 2020
+          Copyright:
+          <a class="text-white" href="admaku.github.io"> Admire Makusha</a>
+        </div>
+        <!-- Copyright -->
+      
+    </footer>
+    <script src="static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'layouts/main.html' %}
+{% block title %} Login{% endblock %}
+{% block content %}
+
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-4 is-offset-4">
+                    <h3 class="title has-text-black">Login</h3> 
+                    <div class="box">
+                        <p class="subtitle has-text-black">Please login to proceed.</p> <br>
+                        <div class="form">
+                            {{ form.name(class_ = 'form-control first-input', placeholder = form.name.label.text, required = true, autofocus = true) }} 
+                            {{ form.password(class_ = 'form-control last-input', placeholder = form.password.label.text, required = true) }}<br>
+                        </div> <br>
+                        <label class="checkbox">
+                            <input type="checkbox">
+                                Remember me
+                            </label> <br>
+                        <button class="button is-block is-info is-medium is-fullwidth">Login py</button>
+                    </div>
+                    <p class="has-text-grey">
+                        <a href="{{ url_for('register') }}">Sign Up</a> &nbsp;·&nbsp;
+                        <a href="{{ url_for('forgot') }}">Forgot Password</a> &nbsp;·&nbsp;
+                        <a href="../">Need Help?</a>
+                    </p>
+                    <p>Add database and Flask-Login to enable user management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script async type="text/javascript" src="../js/bulma.js"></script>
+</body>
+
+{% endblock %}
